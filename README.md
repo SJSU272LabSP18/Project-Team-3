@@ -1,9 +1,12 @@
 # Project-Team-3
 
-Student Names : Deekshitha Reddy Kankanala
-                Vishwajeet Kharote
-                Animesh Grover
-                Chikei Loi
+Student Names : Deekshitha Reddy Kankanala,
+
+                Vishwajeet Kharote,
+                
+                Animesh Grover,
+                
+                Chikei Loi,
 
 Project Ideas
 
