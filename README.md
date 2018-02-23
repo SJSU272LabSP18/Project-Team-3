@@ -18,7 +18,7 @@ Project description:​ In this project, we would like to implement Blockchain t
 
      2.	Project​ ​title​: Provenance and asset quality in oil using blockchain.
 Project description:​ Oil companies frequently contract with third-party blenders to manufacture specialty products. The risk of counterfeits—which can bleed revenue and erode the value of a respected brand—is a concern for manufacturers. The project will provide tracking provenance for authenticity and quality control. This can implemented by a blockchain transaction ledger that track the sourcing and provenance of raw materials and products from suppliers and tollers through blending and first fill, wholesale and retail channels. The ledger could include digital data linked to unique identifiers on labels. If the unique code on the label is not traceable to the blockchain data, the product can be assumed to be counterfeit. 
-The operational performance of a critical asset or equipment can be tracked based not only the cost of the equipment but also the cost of all aspects of the performance lifecycle—including maintenance, operating costs, etc.	
+
 
 
      3.     Project​ ​title​: loyalty program
