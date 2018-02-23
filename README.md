@@ -31,8 +31,8 @@ and scan it to make the payment. Using the recommender, platform will provide
 personalized recommendation to the customer on what they may like from the
 business.
 
-Proposed​ ​methodology/ ​ ​resources: We will be implementing this application using
-Java and bluemix platform. We will be using Kafka to pass around the information.
+# Proposed​ ​methodology/ ​ ​resources: 
+We will be implementing this application using Java and bluemix platform. We will be using Kafka to pass around the information.
 Nosql DB (KV store) to store customer information, profile and preferences.
 Our platform will be multi-tenant providing a dashboard for customer and another
 view for business owner. Business owner can customize details, connect and
