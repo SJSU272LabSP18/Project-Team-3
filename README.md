@@ -1,11 +1,9 @@
 # Project-Team-3
-#CMPE-272 : Project Team 3
-Members:
 
-
-
-
-
+Student Names : Deekshitha Reddy Kankanala
+                Vishwajeet Kharote
+                Animesh Grover
+                Chikei Loi
 
 Project Ideas
 
