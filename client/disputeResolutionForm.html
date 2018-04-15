@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a new Issue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/Article-List.css">
+  <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+  <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+  <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+      <div class="container"><a class="navbar-brand" href="#"><img style="background-image:url(&quot;assets/img/PhoenixMimic.png&quot;);">&nbsp; Phoenix Management</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Notification</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Application </a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">New Application</a><a class="dropdown-item" role="presentation" href="#">Application status</a></div>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Account </a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="Profile.html">Profile</a><a class="dropdown-item" role="presentation" href="#">Settings</a><a class="dropdown-item" role="presentation" href="#">About</a></div>
+                        </li>
+                    </ul><span class="navbar-text actions"><a class="btn btn-light action-button" role="button" href="#" style="background-color: blue;">Log Out</a></span></div>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" style="width:25px;">
+          <ul class="list-group" style="width:250px;">
+            <li class="list-group-item"><a style="text-decoration:none;" href="dashboard.html"><i class="fa fa-home"></i><span><strong>&nbsp;Home</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="Profile.html"><i class="fa fa-user"></i><span><strong>&nbsp;Profile</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="tenantMaintenance.html"><i class="fa fa-wrench"></i><span><strong>&nbsp;Maintainance</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="rentInfo.html"><i class="fa fa-info"></i><span><strong>&nbsp;Rent Information</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="documents.html"><i class="fa fa-sticky-note"></i><span><strong>&nbsp;Documents</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="termination.html"><i class="fa fa-times-circle-o"></i><span><strong>&nbsp;Termination</strong></span></a></li>
+            <li class="list-group-item active"><i class="fa fa-wechat"></i><span><strong>&nbsp;Dispute</strong></span></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="checkout.html"><i class="fa fa-external-link-square"></i><span><strong>&nbsp;Checkout</strong></span></a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="col-md-8 offset-md-2" style="padding-bottom: 25px;">
+            <h1 class="text-center">Dispute Resolution</h1>
+          </div>
+          <form class="bootstrap-form-with-validation">
+            <h2 class="text-center"></h2>
+            <div class="form-group"><label for="text-input" >Subject</label><input class="form-control" type="text" name="text-input" id="text-input"></div>
+            <div class="form-group"><label for="text-input">Dispute Topic</label>
+              <select class="form-control" id="disputeTopic">
+                <option>Payment Resolution</option>
+                <option>Lease details</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="textarea-input">Description</label><textarea class="form-control" name="textarea" id="textarea-input"></textarea></div>
+            <fieldset class="form-group">
+              <label>Is it a first time occurance?</label>
+              <div class="form-check">
+                <label class="form-check-label"><input type="radio" class="form-check-input" name="options1" id="optionYes" value="option1">Yes</label>
+                <label class="form-check-label" style="padding-left: 25px"><input type="radio" class="form-check-input" name="options2" id="optionNo" value="option2">No</label>
+              </div>
+            </fieldset>
+            <div class="form-group"><label for="search-input">Search Lease aggreement</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text"> <i class="fa fa-search"></i></span></div><input class="form-control" type="search" name="search" id="search-input"></div>
+              </div>
+            <div class="form-group"><label for="file-input">Upload supporting Documents &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label><input type="file" name="file-input" id="file-input"></div>
+            <div class="form-group" style="float:right;"><button class="btn btn-primary" type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-clean">
+    <div class="container">
+      <div class="intro"></div>
+    </div>
+    <footer style="padding:25px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Web design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">Hosting</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Legacy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Careers</h3>
+            <ul>
+              <li><a href="#">Job openings</a></li>
+              <li><a href="#">Employee success</a></li>
+              <li><a href="#">Benefits</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+            <p class="copyright">Company Name © 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+  <script src="assets/js/Simple-Slider1.js"></script>
+</body>
+
+</html>

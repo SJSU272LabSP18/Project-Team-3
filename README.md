@@ -38,3 +38,21 @@ Nosql DB (KV store) to store customer information, profile and preferences.
 Our platform will be multi-tenant providing a dashboard for customer and another
 view for business owner. Business owner can customize details, connect and
 provide more personalized campaign and recommendation to their users.
+
+
+
+
+
+
+
+To set up project-
+--------------
+1) install node.js
+2) npm install -g gulp
+3) clone this project git clone
+4) cd into the project
+5) npm install
+6) npm run build 
+7) npm run start
+8) mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca=./server/cert/cert.crt
+
