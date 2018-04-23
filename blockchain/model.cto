@@ -12,10 +12,7 @@
  * limitations under the License.
  */
 
-namespace net.biz.digitalPropertyNetwork
-
-
-
+namespace org.example.basic
 
 
 asset Account identified by accountId {
@@ -41,6 +38,7 @@ abstract participant Person identified by personId {
    o String personId
    o String email
    o String name
+   o String contractId
 }
 
 participant Owner extends Person {
@@ -61,12 +59,6 @@ transaction AccountTransfer {
   o Double amount
 }
 
-transaction Termination {
+transaction UpdateContract {
   --> Contract contract
 }
-
-transaction CreateNewContract {
-  --> Contract contract
-}
-
-
