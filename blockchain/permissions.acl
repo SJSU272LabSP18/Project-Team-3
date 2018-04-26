@@ -36,7 +36,7 @@ rule OwnerCanViewCustomerInfo {
 rule AdminCanReadAndWriteContract {
     description: "Allow all participants read access to all resources"
     participant: "org.example.basic.Administrator"
-    operation: READ,UPDATE,CREATE
+    operation: READ,CREATE
     resource: "org.example.basic.Contract"
     action: ALLOW
 }
@@ -48,6 +48,17 @@ rule OwnerCanReadContract {
     resource: "org.example.basic.Contract"
     action: ALLOW
 }
+
+
+rule CustomerCanReadTheirOwnContract {
+    description: "Allow all participants read access to all resources"
+    participant(p): "org.example.basic.Customer"
+    operation: READ
+    resource(r): "org.example.basic.Contract"
+    condition: (r.customer.getIdentifier() === p.getIdentifier())
+    action: ALLOW
+}
+
 
 rule EveryOneCanMakeMoneyTransactions {
     description: "Allow all participants to submit transactions"
@@ -61,7 +72,7 @@ rule AdminCanUpdateContractTransactions {
     description: "Allow all participants to submit transactions"
     participant: "org.example.basic.Administrator"
     operation: CREATE
-    resource: "org.example.basic.UpdateContract"
+    resource: "org.example.basic.UpdateContractStatus"
     action: ALLOW
 }
 

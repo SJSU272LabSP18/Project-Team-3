@@ -59,6 +59,7 @@ transaction AccountTransfer {
   o Double amount
 }
 
-transaction UpdateContract {
+transaction UpdateContractStatus {
   --> Contract contract
+  o Integer changeStatus
 }
