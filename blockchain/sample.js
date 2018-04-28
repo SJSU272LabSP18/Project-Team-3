@@ -35,13 +35,13 @@
 
      .then(function (assetRegistry){
 
-     return assetRegistry.update(transfer.from)
+     return assetRegistry.update(transfer.to)
 
    }).then(function (){
 
      return getAssetRegistry('org.example.basic.Account')
    }).then(function (assetRegistry){
-     return assetRegistry.update(transfer.to)
+     return assetRegistry.update(transfer.from)
    })
 
 
