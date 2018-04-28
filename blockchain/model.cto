@@ -37,7 +37,8 @@ asset Contract identified by contractId{
 abstract participant Person identified by personId {
    o String personId
    o String email
-   o String name
+   o String firstName
+   o String lastName
    o String contractId
 }
 
@@ -49,7 +50,6 @@ participant Administrator extends Person {
 
 participant Customer extends Person {
   o String SSN
-  o Boolean Payment
 }
 
 
