@@ -9,7 +9,8 @@
     "build": "gulp build",
     "deploy": "concurrently --kill-others \"gulp watch\" \"node ./dist/server/server.js\"",
     "start": "gulp start",
-    "debug": "node --inspect dist/server/server.js"
+    "debug": "node --inspect dist/server/server.js",
+    "deek": "gulp build && gulp start"
   },
   "repository": {
     "type": "git",
@@ -55,6 +56,7 @@
     "mysql": "^2.15.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "popups": "^1.1.3",
     "primeng": "^4.2.2",
     "reflect-metadata": "^0.1.10",
     "request": "^2.83.0",

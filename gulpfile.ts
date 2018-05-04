@@ -155,7 +155,8 @@ gulp.task('watch', () => {
 		console.log('TypeScript file ' + e.path + ' has been changed. Compiling.');
 	});
 
-	gulp.watch(['client/**/*.html', 'client/**/*.css'], ['clientResources']).on('change', (e: any) => {
+
+	gulp.watch(['client/**/*.html', 'client/**/*.css', 'client/**/*.js'], ['clientResources']).on('change', (e: any) => {
 		console.log('Resource file ' + e.path + ' has been changed. Updating.');
 	});
 

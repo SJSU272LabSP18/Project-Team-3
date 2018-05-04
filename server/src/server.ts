@@ -39,9 +39,9 @@ app.use(passport.session());
 
 //initial routes
 const userRoutes = require('./routes/user');
-
+const maintenanceRoutes = require('./routes/maintenance');
 app.use('/api', userRoutes);
-
+app.use('/api', maintenanceRoutes);
 app.get('/', (req: any, res: any) => {
 	res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });

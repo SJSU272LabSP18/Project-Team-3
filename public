@@ -1,0 +1,31 @@
+public class RacistCountry{
+	private String factor;
+	private String effect;
+	private String race;
+	private String condition;
+
+	/*Used to suppress the OtherCountry*/
+	public String suppress(OtherCountry otherCountry)
+	{
+		otherCountry.ignore();
+	}
+
+	/*Used to ignore  the OtherCountry*/
+	public String ignore(OtherCountry otherCountry)
+	{
+		
+		/*code for implementing the mechanism of racism involved */
+
+	}
+
+	/*Used to suppress the OtherCountry*/
+	public String attend(Conference conference)
+	{
+		/*Code for implementing the visit of RacistCountry to attend the Conference*/
+	}
+
+	public String follow(Racism racism)
+	{
+		/*Code to follow the conditions that involve in implementing the  racism*/
+	}
+}

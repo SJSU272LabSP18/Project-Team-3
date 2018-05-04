@@ -17,7 +17,17 @@ exports.db_options = {
 };
 
 exports.db_tables = {
-	USERS : 'rental_users'
+	USERS : 'rental_users',
+    RENTAL_MAINTENANCE: 'rental_maintenance'
+};
+
+exports.maintenance_cost  = {
+    Electrical_Bedroom : 202,
+    electrical_kitchen : 25,
+    heating_bedroom : 201,
+    heating_kitchen : 205,
+    aircondition_kitchen : 209,
+    aircondition_bedroom : 210
 }
 
 

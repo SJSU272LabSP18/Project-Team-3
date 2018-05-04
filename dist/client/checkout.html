@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disputes</title>
+  <title>Checkout</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -41,26 +41,43 @@
           <ul class="list-group" style="width:250px;">
             <li class="list-group-item"><a style="text-decoration:none;" href="dashboard.html"><i class="fa fa-home"></i><span><strong>&nbsp;Home</strong></span></a></li>
             <li class="list-group-item"><a style="text-decoration:none;" href="Profile.html"><i class="fa fa-user"></i><span><strong>&nbsp;Profile</strong></span></a></li>
-            <li class="list-group-item active"><i class="fa fa-wrench"></i><span><strong>&nbsp;Maintainance</strong></span></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="tenantMaintenance.html"><i class="fa fa-wrench"></i><span><strong>&nbsp;Maintainance</strong></span></a></li>
             <li class="list-group-item"><a style="text-decoration:none;" href="rentInfo.html"><i class="fa fa-info"></i><span><strong>&nbsp;Rent Information</strong></span></a></li>
             <li class="list-group-item"><a style="text-decoration:none;" href="documents.html"><i class="fa fa-sticky-note"></i><span><strong>&nbsp;Documents</strong></span></a></li>
             <li class="list-group-item"><a style="text-decoration:none;" href="termination.html"><i class="fa fa-times-circle-o"></i><span><strong>&nbsp;Termination</strong></span></a></li>
-            <li class="list-group-item"><a style="text-decoration:none;" href="disputeResolution.html"><i class="fa fa-wechat"></i><span><strong>&nbsp;Dispute</strong></span></li>
-            <li class="list-group-item"><a style="text-decoration:none;" href="checkout.html"><i class="fa fa-external-link-square"></i><span><strong>&nbsp;Checkout</strong></span></a></li>
+            <li class="list-group-item"><a style="text-decoration:none;" href="disputeResolution.html"><i class="fa fa-wechat"></i><span><strong>&nbsp;Dispute</strong></span></a></li>
+            <li class="list-group-item active">><i class="fa fa-external-link-square"></i><span><strong>&nbsp;Checkout</strong></span></li>
           </ul>
         </div>
         <div class="col-md-9">
           <div class="col-md-8 offset-md-2" style="padding-bottom: 25px;">
-            <h1 class="text-center">Maintenance</h1>
+            <h1 class="text-center">Checkout</h1>
           </div>
           <div>
-            <div class="form-group"><a href="tenantMaintenanceRequestForm.html" class="btn btn-default">Create a new Request</a></div>
-            <div>
-              <h3>Past Requests</h3>
-              <li>Power Outlet not working</li>
-            </div>
+              <div style="display: inline-block;max-width: 600px">
+                <form class="bootstrap-form-with-validation">
+                    <h2 class="text-center"></h2>
+                    <div class="form-group"><label for="text-input">It was a pleasure having you stay with us. Please carefully check the condition of your room and follow the checkout procedure mentioned in the Lease agreement. it is also summerized below:</label>
+                        <ul>
+                            <li>Rooms should be clean at the time of checkout</li>
+                            <li>All the items which were provided to the tenant at the time of leasing should be in working condition.</li>
+                            <li>A checkout inspection needs to take place before the tenant will leave the community.</li>
+                        </ul>
+                    </div>
+                    <div class="form-group"><label for="textarea-input">Suggestions/Remarks</label><textarea class="form-control" name="textarea" id="textarea-input"></textarea></div>
+                    <div class="form-group"><label for="search-input">Search Lease aggreement</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text"> <i class="fa fa-search"></i></span></div><input class="form-control" type="search" name="search" id="search-input"></div>
+                    </div>
+                    <div class="form-group"><button class="btn btn-primary" type="submit" style="float: right;">Submit</button></div>
+                </form>
+              </div>
 
-          </div>
+              <div style="display: inline-block;float: right;border-color: blue;width: 200px;min-height: 400px;">
+                <h6>Based on Lease Document:</h6>
+                You must vacate and get checkout inspection done by December 29, 2018.
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -107,7 +124,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
   <script src="assets/js/Simple-Slider1.js"></script>
-  <script type="text/javascript" src="assets/js/api.js"></script>
 </body>
 
 </html>
