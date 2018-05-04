@@ -1,0 +1,110 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Sample access control list.
+ */
+
+rule AdminCanViewCustomerInfo {
+    description: "Allow all participants read access to all resources"
+    participant: "org.example.basic.Administrator"
+    operation: READ
+    resource: "org.example.basic.Customer"
+    action: ALLOW
+}
+
+rule OwnerCanViewCustomerInfo {
+    description: "Allow all participants read access to all resources"
+    participant: "org.example.basic.Owner"
+    operation: READ
+    resource: "org.example.basic.Customer"
+    action: ALLOW
+}
+
+
+rule AdminCanReadAndWriteContract {
+    description: "Allow all participants read access to all resources"
+    participant: "org.example.basic.Administrator"
+    operation: READ,CREATE
+    resource: "org.example.basic.Contract"
+    action: ALLOW
+}
+
+rule OwnerCanReadContract {
+    description: "Allow all participants read access to all resources"
+    participant: "org.example.basic.Owner"
+    operation: READ
+    resource: "org.example.basic.Contract"
+    action: ALLOW
+}
+
+
+rule CustomerCanReadTheirOwnContract {
+    description: "Allow all participants read access to all resources"
+    participant(p): "org.example.basic.Customer"
+    operation: READ
+    resource(r): "org.example.basic.Contract"
+    condition: (r.customer.getIdentifier() === p.getIdentifier())
+    action: ALLOW
+}
+
+
+rule EveryOneCanMakeMoneyTransactions {
+    description: "Allow all participants to submit transactions"
+    participant: "org.example.basic.Person"
+    operation: CREATE
+    resource: "org.example.basic.AccountTransfer"
+    action: ALLOW
+}
+
+rule AdminCanUpdateContractTransactions {
+    description: "Allow all participants to submit transactions"
+    participant: "org.example.basic.Administrator"
+    operation: CREATE
+    resource: "org.example.basic.UpdateContractStatus"
+    action: ALLOW
+}
+
+rule EveryoneHasFullAccessToTheirAccount {
+    description: "Allow all participants full access to their assets"
+    participant(p): "org.example.basic.Person"
+    operation: ALL
+    resource(r): "org.example.basic.Account"
+    condition: (r.owner.getIdentifier() === p.getIdentifier())
+    action: ALLOW
+}
+
+rule SystemACL {
+    description: "System ACL to permit all access"
+    participant: "org.hyperledger.composer.system.Participant"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}
