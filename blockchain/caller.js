@@ -16,8 +16,21 @@ blockchain.createUser('Administrator', 1000, '456@hotmail.com',function(){
 })
 
 
-blockchain.getPerson('Administrator', 1000,function(person){
-  console.log(person)
+blockchain.getPerson('Customer', 1,function(person){
+  console.log(person.contractId)
+  console.log(person.email)
+  console.log(person.personId)
+})
+
+
+//get customer's contract
+blockchain.getContract('Customer', 1,function(contract){
+  console.log(contract.customerId)
+  console.log(contract.administratorId)
+  console.log(contract.doc)
+  console.log(contract.LeasingStart)
+  console.log(contract.LeasingEnd)
+  console.log(contract.Status)
 })
 
 

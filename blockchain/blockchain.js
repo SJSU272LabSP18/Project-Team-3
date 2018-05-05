@@ -4,7 +4,7 @@ let bizNetworkConnection = new BusinessNetworkConnection();
 
 
 module.exports = {
-  createUser: async function(userType, id, email,callback) {
+  createUser: async function(userType, id, email, callback) {
 
     try {
 
@@ -69,6 +69,31 @@ module.exports = {
 
   },
 
+  getContract: async function(userType, id, callback) {
+
+    try {
+
+      let businessNetworkDefintion = await bizNetworkConnection.connect('admin@ap');
+      let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.' + userType)
+
+      let person = await personRegistry.get(id + '');
+
+      let contractRegistry = await bizNetworkConnection.getAssetRegistry('org.example.basic.Contract')
+
+      let contract = await contractRegistry.get(person.contractId);
+
+
+      await bizNetworkConnection.disconnect();
+
+      callback(contract)
+
+    } catch (error) {
+      console.log(error);
+    }
+
+
+  },
+
   moneyTransfer: async function(fromId, toId, amount, callback) {
     try {
 
@@ -103,7 +128,7 @@ module.exports = {
 
 
       let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
-      let customer = await personRegistry.get(customerId+'')
+      let customer = await personRegistry.get(customerId + '')
 
 
       let serializer = businessNetworkDefintion.getSerializer();
@@ -147,7 +172,7 @@ module.exports = {
 
 
       let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
-      let customer = await personRegistry.get(customerId+'')
+      let customer = await personRegistry.get(customerId + '')
 
 
       customer.contractId = contractId + ''
