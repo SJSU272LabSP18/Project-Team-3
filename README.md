@@ -56,3 +56,21 @@ To set up project-
 7) npm run start
 8) mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca=./server/cert/cert.crt
 
+
+steps to install and run
+
+npm install
+npm run build && npm run start
+To debug server code in chrome
+
+npm run build
+npm run debug
+in browser goto chrome://inspect
+click on project link, under source tab you will see all server file, now you can add breakpoints and debug
+Note: dist folder will be created automatically when you build. Do not make code changes inside dist folder.
+
+steps to connect to mysql:
+
+opne your command prompt or terminal
+mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca={project_path}\server\cert\ssl.crt
+it should ask you password enter below password YUNVSJBQKEHIOIQJ
