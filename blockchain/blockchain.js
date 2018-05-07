@@ -31,6 +31,7 @@ module.exports = {
       let account = factory.newResource('org.example.basic', 'Account', id + '');
 
       account.balance = balance
+      account.owner = owner
 
 
       await personRegistry.add(owner)
@@ -156,6 +157,15 @@ module.exports = {
       let businessNetworkDefintion = await bizNetworkConnection.connect('admin@ap');
       let factory = businessNetworkDefintion.getFactory();
 
+
+
+
+      let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
+      let customer = await personRegistry.get(customerId + '')
+
+      let adminRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Administrator')
+      let admin = await adminRegistry.get(adminId + '')
+
       let contractId = Math.floor(Math.random() * 10000) + 100
 
       let contractRegistry = await bizNetworkConnection.getAssetRegistry('org.example.basic.Contract')
@@ -164,15 +174,13 @@ module.exports = {
 
       contract.doc = docString
       contract.customerId = customerId + ''
+      contract.customer = customer
+      contract.admin = admin
       contract.administratorId = adminId + ''
       contract.LeasingStart = '2018/5/7'
       contract.LeasingEnd = '2019/5/7'
       contract.Status = 1
 
-
-
-      let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
-      let customer = await personRegistry.get(customerId + '')
 
 
       customer.contractId = contractId + ''
