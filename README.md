@@ -15,7 +15,7 @@ Project:
 
 Project description:​ In this project, we would like to implement Blockchain technology in apartment rental transaction workflow. For people who have experience in renting apartment, leasing offices make the thing look easy. However, it can be quite complicated in reality. A significant challenge nowadays faced by apartment rental networks is that the supporting information systems are often disintegrated. Blockchain technology provides a possibility where every member in this network could monitor access and share and analyze consistent and up-to-date information.
 
-## Project Live: http://ec2-54-183-237-25.us-west-1.compute.amazonaws.com/
+## Project Live: http://ec2-54-183-237-25.us-west-1.compute.amazonaws.com:3000/
 
 USECASES /PERSONAS:
 
