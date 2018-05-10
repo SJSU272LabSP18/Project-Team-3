@@ -69,29 +69,16 @@ Our platform will be multi-tenant providing a dashboard for customer and another
 To set up project-
 --------------
 1) install node.js
-2) npm install -g gulp
-3) clone this project git clone
-4) cd into the project
-5) npm install
-6) npm run build 
-7) npm run start
-8) mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca=./server/cert/cert.crt
+2) install and run docker
+3) install composer-playground and composer-cli
+4) npm install -g gulp
+5) clone this project git clone
+6) cd into the project
+7) npm install
+8) npm run start1
+9) cd to fabric-dev-servers
+10) ./downloadFabric.sh
+11) ./startFabric.sh
+12) ./createPeerAdminCard.sh
+13) composer-playground
 
-
-steps to install and run
-
-npm install
-npm run build && npm run start
-To debug server code in chrome
-
-npm run build
-npm run debug
-in browser goto chrome://inspect
-click on project link, under source tab you will see all server file, now you can add breakpoints and debug
-Note: dist folder will be created automatically when you build. Do not make code changes inside dist folder.
-
-steps to connect to mysql:
-
-opne your command prompt or terminal
-mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca={project_path}\server\cert\ssl.crt
-it should ask you password enter below password YUNVSJBQKEHIOIQJ
