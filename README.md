@@ -42,6 +42,10 @@ lease document.
 violation of any terms specified in the lease document.
 ● The dispute resolution at the time of lease termination is handled effectively.
 
+## Featues:
+### Using blockchain to store all the transactions between tenants and the leasing office/property manager. Including payment, dispute resolution and lease renewal.
+### usinng spark and ML to compare the current lease with any new laws and regulation enforced by the state/county.
+
 # Proposed​ ​methodology/ ​ ​resources: 
 We will be implementing this application using Java and bluemix platform.
 nodejs react for back end
