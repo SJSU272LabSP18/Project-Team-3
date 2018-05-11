@@ -34,17 +34,23 @@ better way for the maintenance requests they raised. Also perform big data analy
 all the properties managed by her.
 
 Working of our Project:
-● Blockchain is used to store all the important documents to ensure they remain
+
+1. Blockchain is used to store all the important documents to ensure they remain
 secure.
-● Customer specifies the requirements and the application scans the entire lease
+
+2. Customer specifies the requirements and the application scans the entire lease
 document using SparkML. This provides the exact, accurate summary of the
 lease document and allows customer to have a clear understanding of the long
 lease document.
-● It will provide the customer the penalty associated with early lease termination,
+
+3. It will provide the customer the penalty associated with early lease termination,
 violation of any terms specified in the lease document.
-● The dispute resolution at the time of lease termination is handled effectively.
-● If some state law has proposed a new law stating that there is increase in rent or any specific change ,then we will compare with the current information and then tenant will get that information.
-● Even if the tenant claims that he paid rent two days before ,we have timestamp which would store the total history so that he cant claim and every thing would get validated.
+
+4. The dispute resolution at the time of lease termination is handled effectively.
+
+5. If some state law has proposed a new law stating that there is increase in rent or any specific change ,then we will compare with the current information and then tenant will get that information.
+
+6. Even if the tenant claims that he paid rent two days before ,we have timestamp which would store the total history so that he cant claim and every thing would get validated.
 
 
 
