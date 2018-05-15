@@ -54,10 +54,6 @@ violation of any terms specified in the lease document.
 
 
 
-## Featues:
-### Using blockchain to store all the transactions between tenants and the leasing office/property manager. Including payment, dispute resolution and lease renewal.
-### usinng spark and ML to compare the current lease with any new laws and regulation enforced by the state/county.
-
 # Proposed​ ​methodology/ ​ ​resources: 
 We implemented the front end by using the react and backend is implemented by nodejs.
 Blockchain and Hyperledger composer have been used inorder to store the lease document.
