@@ -1,0 +1,46 @@
+info attempt registry request try #1 at 01:08:05
+http request GET https://registry.npmjs.org/-/v1/search?text=keywords%3Acomposer-network%20maintainer%3Ahyperledger-ci
+http 200 https://registry.npmjs.org/-/v1/search?text=keywords%3Acomposer-network%20maintainer%3Ahyperledger-ci
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/basic-sample-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/digitalproperty-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/carauction-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/marbles-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/trade-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/perishable-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/pii-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/vehicle-lifecycle-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/bond-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/animaltracking-network
+info attempt registry request try #1 at 01:08:06
+http request GET https://registry.npmjs.org/vehicle-manufacture-network
+http 200 https://registry.npmjs.org/basic-sample-network
+http 200 https://registry.npmjs.org/vehicle-manufacture-network
+http 200 https://registry.npmjs.org/trade-network
+http 200 https://registry.npmjs.org/pii-network
+http 200 https://registry.npmjs.org/vehicle-lifecycle-network
+http 200 https://registry.npmjs.org/marbles-network
+http 200 https://registry.npmjs.org/bond-network
+http 200 https://registry.npmjs.org/perishable-network
+http 200 https://registry.npmjs.org/animaltracking-network
+http 200 https://registry.npmjs.org/digitalproperty-network
+http 200 https://registry.npmjs.org/carauction-network
+info attempt registry request try #1 at 01:08:06
+http fetch GET https://registry.npmjs.org/basic-sample-network/-/basic-sample-network-0.2.4-20180509083608.tgz
+http fetch 200 https://registry.npmjs.org/basic-sample-network/-/basic-sample-network-0.2.4-20180509083608.tgz
+[31merror[39m: [Hyperledger-Composer] :HLFConnectionManager     :fabric-client()           [client-utils.js]: sendPeersProposal - Promise is rejected: Error: 2 UNKNOWN: error executing chaincode: transaction returned with failure: Error: The current identity, with the name 'admin' and the identifier '01899e04161a3a6d64670504fa122e55818295352929b6a616333a3739fde3f2', must be activated (ACTIVATION_REQUIRED)
+    at new createStatusError (/home/ubuntu/lib/node_modules/composer-playground/node_modules/grpc/src/client.js:64:15)
+    at /home/ubuntu/lib/node_modules/composer-playground/node_modules/grpc/src/client.js:583:15
+[31merror[39m: [Hyperledger-Composer] :HLFConnection            :ping()                    Error: Error trying to ping. Error: 2 UNKNOWN: error executing chaincode: transaction returned with failure: Error: The current identity, with the name 'admin' and the identifier '01899e04161a3a6d64670504fa122e55818295352929b6a616333a3739fde3f2', must be activated (ACTIVATION_REQUIRED)
+    at _checkRuntimeVersions.then.catch (/home/ubuntu/lib/node_modules/composer-playground/node_modules/composer-connector-hlfv1/lib/hlfconnection.js:790:34)
+    at <anonymous>
+[31merror[39m: [Hyperledger-Composer] :ConnectorServer          :Error: Error trying to pi

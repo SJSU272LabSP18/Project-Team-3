@@ -1,10 +1,11 @@
+ "use strict"
 const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
 
 let bizNetworkConnection = new BusinessNetworkConnection();
 
 
 module.exports = {
-  createUser: async function(userType, id, email, callback) {
+  createUser: async function(userType, id, email, firstName, lastName, callback) {
 
     try {
 
@@ -16,8 +17,8 @@ module.exports = {
 
       let owner = factory.newResource('org.example.basic', userType, id + '');
 
-      owner.firstName = ""
-      owner.lastName = ""
+      owner.firstName = firstName
+      owner.lastName = lastName
       owner.contractId = ""
       owner.email = email
 
@@ -177,9 +178,9 @@ module.exports = {
       contract.customer = customer
       contract.admin = admin
       contract.administratorId = adminId + ''
-      contract.LeasingStart = '2018/5/7'
-      contract.LeasingEnd = '2019/5/7'
-      contract.Status = 1
+      contract.LeasingStart = new Date().toLocaleDateString();
+      contract.LeasingEnd = '2018/12/31'
+      contract.Status = 'New Lease'
 
 
 
@@ -187,6 +188,83 @@ module.exports = {
 
       await personRegistry.update(customer)
       await contractRegistry.add(contract)
+
+      await bizNetworkConnection.disconnect();
+
+
+      callback()
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  },
+  CreateMaintenance: async function(customerId,adminId,type,location,callback) {
+
+    try {
+      let businessNetworkDefintion = await bizNetworkConnection.connect('admin@ap');
+      let factory = businessNetworkDefintion.getFactory();
+
+
+
+      let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
+      let customer = await personRegistry.get(customerId + '')
+
+      let adminRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Administrator')
+      let admin = await adminRegistry.get(adminId + '')
+
+      let maintainenceId = Math.floor(Math.random() * 10000) + 100
+
+      let maintainenceRegistry = await bizNetworkConnection.getAssetRegistry('org.example.basic.Maintainence')
+
+      let maintainence = factory.newResource('org.example.basic', 'Maintainence', maintainenceId + '');
+
+      maintainence.date = new Date().toLocaleDateString();
+      maintainence.customer = customer;
+      maintainence.admin = admin;
+      maintainence.type = type;
+      maintainence.location = location;
+
+
+      await maintainenceRegistry.add(maintainence)
+
+      await bizNetworkConnection.disconnect();
+
+
+      callback()
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  },
+  CreateDispute: async function(customerId,adminId,topic, callback) {
+
+    try {
+      let businessNetworkDefintion = await bizNetworkConnection.connect('admin@ap');
+      let factory = businessNetworkDefintion.getFactory();
+
+
+
+      let personRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Customer')
+      let customer = await personRegistry.get(customerId + '')
+
+      let adminRegistry = await bizNetworkConnection.getParticipantRegistry('org.example.basic.Administrator')
+      let admin = await adminRegistry.get(adminId + '')
+
+      let disputeId = Math.floor(Math.random() * 10000) + 100
+
+      let disputeRegistry = await bizNetworkConnection.getAssetRegistry('org.example.basic.Dispute')
+
+      let dispute = factory.newResource('org.example.basic', 'Dispute', disputeId + '');
+
+      dispute.date = new Date().toLocaleDateString();
+      dispute.customer = customer;
+      dispute.admin = admin;
+      dispute.topic = topic;
+
+
+      await disputeRegistry.add(dispute)
 
       await bizNetworkConnection.disconnect();
 
