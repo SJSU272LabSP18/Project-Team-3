@@ -83,5 +83,5 @@ To set up project-
 10) ./downloadFabric.sh
 11) ./startFabric.sh
 12) ./createPeerAdminCard.sh
-13) composer-playground
+13) composer-playground.
 
